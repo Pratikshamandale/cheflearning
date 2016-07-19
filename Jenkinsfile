@@ -4,3 +4,4 @@
 // and invokes it.
 echo "hi"
 build job: 'date', parameters: [[$class: 'StringParameterValue', name: 'var', value: '10.10.6.105']]
+echo ${env.JOB_NAME}
