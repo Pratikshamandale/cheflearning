@@ -1,5 +1,5 @@
  node ('linux'){
   stage 'Build and Test'
   checkout scm
-  echo "Jenkinsfile in cheflearning"
+  build job: 'date', parameters: [[$class: 'StringParameterValue', name: 'var', value: '10.10.6.105']]
 }
