@@ -28,4 +28,7 @@ echo "fourth branch"
 echo "check check"
 
 echo "check check check"
+
+mail bcc: '', body: 'U r code looks good', cc: '', charset: '', from: '', mimeType: '', replyTo: '', subject: 'Pipeline', to: 'pratiksha.mandale@opexsoftware.com'
+
 }
