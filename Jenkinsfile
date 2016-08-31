@@ -31,22 +31,19 @@ echo "check check check"
 
 sh "git log --after='2016-08-30' | grep Author | cut -d'<' -f2|cut -d'>' -f1 > author"
 
-def lines = readFile("author")
+sh "awk '!seen[$0]++' author > author2"
 
-String[] linesFile = lines.replaceAll("\n"," ")
+def lines = readFile("author2")
 
-def resultList = linesFile.tokenize()
+String[] linesFile = lines.replaceAll("\n",",")
+
+//def resultList = linesFile.tokenize()
 
 //resultList.unique()
-Set<String> uniqueWords = new HashSet<String>();
-for (String word : linesFile) {
-    uniqueWords.add(word);
-}
 
 
-println uniqueWords
 
-println resultList
+//println resultList
 
 
 println linesFile
