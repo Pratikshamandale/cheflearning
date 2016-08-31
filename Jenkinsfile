@@ -41,7 +41,9 @@ String[] linesFile = lines.replaceAll("\n",",")
 
 //println linesFile
 
-mail bcc: '', body: 'Testing the multibranch..', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'Test Multibranch', to: '${linesFile}monalireddy@opexsoftware.com'
+//mail bcc: '', body: 'Testing the multibranch..', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'Test Multibranch', to: '${linesFile}monalireddy@opexsoftware.com'
+mail bcc: '', body: 'Testing the multibranch..', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'Test Multibranch', to: 'pratikshamandale@opexsoftware.com,monalireddy@opexsoftware.com'
+
 
 }
 
