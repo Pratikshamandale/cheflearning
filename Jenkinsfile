@@ -35,6 +35,10 @@ def lines = readFile("author")
 
 String[] linesFile = lines.replaceAll("\n"," ")
 
+def resultList = linesFile.tokenize()
+
+println resultList
+
 println linesFile
 
 
