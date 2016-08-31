@@ -29,6 +29,15 @@ echo "check check"
 
 echo "check check check"
 
-sh "git log --after='2016-08-24' | grep Author | cut -d'<' -f2|cut -d'>' -f1"
+sh "git log --after='2016-08-30' | grep Author | cut -d'<' -f2|cut -d'>' -f1 > author"
 
+
+File file = new File("author")
+def lines = file.readLines()
+
+println lines[0]
+
+lines.unique()
+
+println lines
 }
