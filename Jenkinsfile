@@ -29,5 +29,6 @@ echo "check check"
 
 echo "check check check"
 
-mail bcc: '', body: 'U r code looks good', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'Pipeline', to: 'pratiksha.mandale@opexsoftware.com'
+
+
 }
