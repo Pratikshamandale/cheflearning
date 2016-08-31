@@ -37,6 +37,8 @@ String[] linesFile = lines.replaceAll("\n"," ")
 
 def resultList = linesFile.tokenize()
 
+resultList.unique()
+
 println resultList
 
 println linesFile
