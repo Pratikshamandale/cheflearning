@@ -37,7 +37,7 @@ def lines = readFile("author2")
 
 String[] linesFile = lines.replaceAll("\n",",")
 
-linesFile.append('monalireddy@opexsoftware.com')
+//linesFile.append('monalireddy@opexsoftware.com')
 
 //def resultList = linesFile.tokenize()
 
@@ -52,3 +52,5 @@ println linesFile
 
 
 }
+
+linesFile.append('monalireddy@opexsoftware.com')
