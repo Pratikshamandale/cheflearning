@@ -34,7 +34,6 @@ sh "git log --after='2016-08-30' | grep Author | cut -d'<' -f2|cut -d'>' -f1 > a
 def lines = readFile("author")
 
 String[] linesFile = lines.replaceAll("\n"," ")
-linesFile.spilt(" ")
 
 println linesFile
 
