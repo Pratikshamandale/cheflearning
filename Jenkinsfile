@@ -29,6 +29,6 @@ echo "check check"
 
 echo "check check check"
 
-
+sh "git log --after="2016-08-24 00:00" | grep Author | cut -d'<' -f2|cut -d'>' -f1"
 
 }
