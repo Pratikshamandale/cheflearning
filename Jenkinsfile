@@ -37,12 +37,10 @@ def lines = readFile("author2")
 
 String[] linesFile = lines.replaceAll("\n",",")
 
-//linesFile.subSequence(0, removeString.length() - 1)
-
-//println linesFile
+println linesFile
 
 //mail bcc: '', body: 'Testing the multibranch..', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'Test Multibranch', to: '${linesFile}monalireddy@opexsoftware.com'
-mail bcc: '', body: 'Testing the multibranch..', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'Test Multibranch', to: 'pratikshamandale@opexsoftware.com'
+mail bcc: '', body: 'Testing the multibranch', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'Test Multibranch', to: 'pratiksha.mandale@opexsoftware.com'
 
 
 }
