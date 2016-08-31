@@ -29,10 +29,10 @@ echo "check check"
 
 echo "check check check"
 
-sh "git log --after='2016-08-30' | grep Author | cut -d'<' -f2|cut -d'>' -f1 > author"
+sh "git log --after='2016-08-30' | grep Author | cut -d'<' -f2|cut -d'>' -f1 > /tmp/author"
 
 
-File file = new File("author")
+File file = new File("/tmp/author")
 def lines = file.readLines()
 
 println lines[0]
