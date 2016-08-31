@@ -37,7 +37,7 @@ def lines = readFile("author2")
 
 String[] linesFile = lines.replaceAll("\n",",")
 
-lineFile=lineFile+'monalireddy@opexsoftware.com'
+linesFile.subSequence(0, removeString.length() - 1)
 
 println linesFile
 
