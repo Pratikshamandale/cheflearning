@@ -39,8 +39,8 @@ String[] linesFile = lines.replaceAll("\n",",")
 
 println linesFile
 
-//mail bcc: '', body: 'Testing the multibranch..', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'Test Multibranch', to: '${linesFile}monali.reddy@opexsoftware.com'
-mail bcc: '', body: 'Testing the multibranch', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'Test Multibranch', to: 'pratiksha.mandale@opexsoftware.com,monali.reddy@opexsoftware.com'
+mail bcc: '', body: 'Testing the multibranch..', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'Test Multibranch', to: "${linesFile}monali.reddy@opexsoftware.com"
+//mail bcc: '', body: 'Testing the multibranch', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'Test Multibranch', to: 'pratiksha.mandale@opexsoftware.com,monali.reddy@opexsoftware.com'
 
 
 }
