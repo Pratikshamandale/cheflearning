@@ -37,9 +37,17 @@ String[] linesFile = lines.replaceAll("\n"," ")
 
 def resultList = linesFile.tokenize()
 
-resultList.unique()
+//resultList.unique()
+Set<String> uniqueWords = new HashSet<String>();
+for (String word : linesFile) {
+    uniqueWords.add(word);
+}
+
+
+println uniqueWords
 
 println resultList
+
 
 println linesFile
 
