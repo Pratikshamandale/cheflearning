@@ -31,7 +31,7 @@ echo "check check check"
 
 sh "git log --after='2016-08-30' | grep Author | cut -d'<' -f2|cut -d'>' -f1 > author"
 
-sh "awk '!seen[$0]++' author > author2"
+sh "awk '!seen[\$0]++' author > author2"
 
 def lines = readFile("author2")
 
