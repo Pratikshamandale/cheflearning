@@ -29,17 +29,14 @@ echo "check check"
 
 echo "check check check"
 
-sh "git log --after='2016-08-30' | grep Author | cut -d'<' -f2|cut -d'>' -f1 > author"
+sh "git log --after 2.days.ago --before 1.days.ago | grep Author | cut -d'<' -f2|cut -d'>' -f1 > author"
 
-sh "awk '!seen[\$0]++' author > author2"
+sh "awk '!seen[\$0]++' author > uniqueAuthor"
 
-def lines = readFile("author2")
+def lines = readFile("uniqueAuthor")
 
 String[] linesFile = lines.replaceAll("\n",",")
 
-def date=new Date().format( 'yyyyMMdd' )
-
-println date
 
 println linesFile
 
