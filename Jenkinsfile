@@ -41,6 +41,10 @@ echo "check check check"
 
 catch(Exception e)
 {
+
+
+stage 'Email Notification'
+
 println "Build failed"
 
 sh "awk '!seen[\$0]++' author > uniqueAuthor"
