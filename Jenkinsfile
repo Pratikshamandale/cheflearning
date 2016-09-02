@@ -18,6 +18,7 @@ def branch_name = job[1]
 println branch_name
 
 //git branch: 'new-one' , credentialsId: '1b4c58ed-4fbc-4be0-97e6-dcf63419b44b', url: 'https://github.com/Pratikshamandale/cheflearning.git'
+
 git branch: '{branch_name}', credentialsId: '1b4c58ed-4fbc-4be0-97e6-dcf63419b44b', url: 'https://github.com/Pratikshamandale/cheflearning.git'
 
 
@@ -50,8 +51,8 @@ String[] linesFile = lines.replaceAll("\n",",")
 
 println "Mails will be send to : ${linesFile}monali.reddy@opexsoftware.com"
 
-//mail bcc: '', body: 'Testing the multibranch..', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'Test Multibranch', to: "${linesFile}monali.reddy@opexsoftware.com"
-//mail bcc: '', body: 'Testing the multibranch', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'Test Multibranch', to: 'pratiksha.mandale@opexsoftware.com,monali.reddy@opexsoftware.com'
+mail bcc: '', body: 'ILP code did not succesfully pass the build and unit-test jobs in the Continuous Integration pipeline.', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: "Failed report -${branch_name}", to: "${linesFile}monali.reddy@opexsoftware.com"
+//mail bcc: '', body: 'ILP code did not succesfully pass the build and unit-test jobs in the Continuous Integration pipeline. ', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: "Test Multibranch", to: 'pratiksha.mandale@opexsoftware.com,monali.reddy@opexsoftware.com'
 }
 
 }
