@@ -10,7 +10,7 @@ echo "hi"
 echo env.JOB_NAME
 
 def job = env.JOB_NAME.split('/')
-def branch_name = job[1]
+def branch_name = job[0]
 
 println branch_name
 
