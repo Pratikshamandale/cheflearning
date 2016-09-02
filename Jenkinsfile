@@ -5,15 +5,16 @@
 
 node('master'){
 
+def job = env.JOB_NAME.split('/')
+def branch_name = job[1]
+
+
 try
 {
 stage 'First'
 echo "hi"
 //build job: 'date', parameters: [[$class: 'StringParameterValue', name: 'var', value: '10.10.6.105']]
 echo env.JOB_NAME
-
-def job = env.JOB_NAME.split('/')
-def branch_name = job[1]
 
 println branch_name
 
