@@ -39,9 +39,8 @@ echo "check check check"
 
 catch(Exception e)
 {
-flag =0
-println "Exception caught"
-}
+println "Build failed"
+
 sh "awk '!seen[\$0]++' author > uniqueAuthor"
 
 def lines = readFile("uniqueAuthor")
@@ -53,7 +52,7 @@ println "Mails will be send to : ${linesFile}monali.reddy@opexsoftware.com"
 
 //mail bcc: '', body: 'Testing the multibranch..', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'Test Multibranch', to: "${linesFile}monali.reddy@opexsoftware.com"
 //mail bcc: '', body: 'Testing the multibranch', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'Test Multibranch', to: 'pratiksha.mandale@opexsoftware.com,monali.reddy@opexsoftware.com'
-
+}
 
 }
 
