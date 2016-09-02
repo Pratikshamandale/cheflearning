@@ -29,7 +29,7 @@ echo "check check"
 
 echo "check check check"
 
-sh "git log --after 2.days.ago --before 1.days.ago | grep Author | cut -d'<' -f2|cut -d'>' -f1 > author"
+sh "git log --after 1.days.ago | grep Author | cut -d'<' -f2|cut -d'>' -f1 > author"
 
 sh "awk '!seen[\$0]++' author > uniqueAuthor"
 
