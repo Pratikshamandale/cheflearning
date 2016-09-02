@@ -12,6 +12,8 @@ echo env.JOB_NAME
 def job = env.JOB_NAME.split('/')
 def branch_name = job[0]
 
+println branch_name
+
 git branch: '${branch_name}' , credentialsId: '1b4c58ed-4fbc-4be0-97e6-dcf63419b44b', url: 'https://github.com/Pratikshamandale/cheflearning.git'
 
 
