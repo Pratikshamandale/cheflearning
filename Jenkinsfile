@@ -22,7 +22,7 @@ println job_name
 println branch_name
 
 
-git branch: '${branch_name}', credentialsId: '1b4c58ed-4fbc-4be0-97e6-dcf63419b44b', url: 'https://github.com/Pratikshamandale/cheflearning.git'
+git branch: "${branch_name}", credentialsId: '1b4c58ed-4fbc-4be0-97e6-dcf63419b44b', url: 'https://github.com/Pratikshamandale/cheflearning.git'
 
 
 stage 'Second'
