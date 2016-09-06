@@ -28,7 +28,7 @@ echo "Second"
 echo "new branch added"
 
 echo "third branch "
-sh "ls"
+sh "l"
 echo "fourth branch"
 
 echo "check check"
