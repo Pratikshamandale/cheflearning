@@ -7,7 +7,7 @@ node('master'){
 
 def job = env.JOB_NAME.split('/')
 def branch_name = job[1]
-
+def build_num=env.BUILD_NUMBER
 
 try
 {
@@ -56,6 +56,9 @@ String[] linesFile = lines.replaceAll("\n",",")
 
 println "Mails will be send to : ${linesFile}monali.reddy@opexsoftware.com"
 
+def url = "http://localhost:8080/job/jenkinsfile_multibranch/job/${branch_name}/${build_number}/console"
+
+println url
 
 //mail bcc: '', body: 'ILP code did not succesfully pass the build and unit-test jobs in the Continuous Integration pipeline.', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: "Failed report -${branch_name}", to: "${linesFile}monali.reddy@opexsoftware.com"
 //mail bcc: '', body: 'ILP code did not succesfully pass the build and unit-test jobs in the Continuous Integration pipeline. ', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: "Test Multibranch", to: 'pratiksha.mandale@opexsoftware.com,monali.reddy@opexsoftware.com'
