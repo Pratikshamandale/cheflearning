@@ -60,7 +60,7 @@ def url = "http://52.91.44.91:8080/job/email_test_pipeline/job/${branch_name}/${
 
 println url
 
-//mail bcc: '', body: "ILP code did not succesfully pass the build and unit-test jobs in the Continuous Integration pipeline.\nFor more details go to : ${url} ", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: "Failed report -${branch_name}", to: "${linesFile}monali.reddy@opexsoftware.com"
+mail bcc: '', body: "ILP code did not succesfully pass the build and unit-test jobs in the Continuous Integration pipeline.\nFor more details go to : ${url} ", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: "Failed report -${branch_name}", to: "${linesFile}monali.reddy@opexsoftware.com"
 //mail bcc: '', body: 'ILP code did not succesfully pass the build and unit-test jobs in the Continuous Integration pipeline. ', cc: '', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: "Test Multibranch", to: 'pratiksha.mandale@opexsoftware.com,monali.reddy@opexsoftware.com'
 
 sh "exit 1"
