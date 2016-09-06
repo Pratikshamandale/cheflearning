@@ -56,7 +56,7 @@ String[] linesFile = lines.replaceAll("\n",",")
 
 println "Mails will be send to : ${linesFile}monali.reddy@opexsoftware.com"
 
-def url = "http://localhost:8080/job/jenkinsfile_multibranch/job/${branch_name}/${build_number}/console"
+def url = "http://localhost:8080/job/jenkinsfile_multibranch/job/${branch_name}/${build_num}/console"
 
 println url
 
