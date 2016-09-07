@@ -9,6 +9,7 @@ echo "hi"
 //build job: 'date', parameters: [[$class: 'StringParameterValue', name: 'var', value: '10.10.6.105']]
 echo env.JOB_NAME
 
+def build_number = "${env.BUILD_NUMBER}"
 def job = env.JOB_NAME.split('/')
 def job_name = job[0]
 def branch_name = job[1]
