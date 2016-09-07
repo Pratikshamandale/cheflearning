@@ -13,9 +13,6 @@ def job = env.JOB_NAME.split('/')
 def branch_name = job[1]
 def git_branch_name= branch_name.replaceAll("%2F","/")
 
-println "Build branch: ${git_build_branch}"
-println branch_name
-
 
 println git_branch_name
 
