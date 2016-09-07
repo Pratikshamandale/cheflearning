@@ -10,15 +10,19 @@ echo "hi"
 echo env.JOB_NAME
 
 def job = env.JOB_NAME.split('/')
+def job_name = job[0]
 def branch_name = job[1]
 def git_branch_name= branch_name.replaceAll("%2F","/")
-
+def url_branch_name = git_branch_name.replaceAll("/","%252F")
+def error_url = "http://localhost:8080/job/${job_name}/job/${url_branch_name}/${build_number}/console"
 
 println git_branch_name
 
 //git branch: 'new-one' , credentialsId: '1b4c58ed-4fbc-4be0-97e6-dcf63419b44b', url: 'https://github.com/Pratikshamandale/cheflearning.git'
 git branch: "${git_branch_name}", credentialsId: '1b4c58ed-4fbc-4be0-97e6-dcf63419b44b', url: 'https://github.com/Pratikshamandale/cheflearning.git'
 
+
+println error_url
 
 stage 'Second'
 echo "Second"
