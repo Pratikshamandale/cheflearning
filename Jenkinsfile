@@ -28,7 +28,7 @@ println error_url
 stage 'Second'
 echo "Second"
 
-echo "new branch added:bug/ILP-1577_Sync_Progress_issue_in_upcoming_meetings"
+echo "new branch added:bug/ILP-1572F"
 
 echo "third branch "
 
