@@ -11,6 +11,8 @@ echo env.JOB_NAME
 
 def job = env.JOB_NAME.split('/')
 def branch_name = job[1]
+def git_build_branch = env.BUILD_BRANCH
+
 
 println branch_name
 
