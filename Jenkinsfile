@@ -14,7 +14,7 @@ def branch_name = job[1]
 
 println branch_name
 
-String[] git_branch_name= branch_name.replaceAll("%","/")
+String[] git_branch_name= branch_name.replaceAll("%2F","/")
 
 println git_branch_name
 
