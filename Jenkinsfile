@@ -28,7 +28,9 @@ println error_url
 stage 'Second'
 echo "Second"
 
-echo "new branch added"
+echo "new branch added: feature/ILP-203_add_outcome_notes_to_topic
+
+"
 
 echo "third branch "
 
